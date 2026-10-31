@@ -1,0 +1,52 @@
+{
+  "name": "kimai",
+  "version": "0.1.0",
+  "description": "Kimai timers in Claude Code: a footer chip for running timers and a /kimai panel to list, edit and start them",
+  "author": {
+    "name": "Andrew Mitchell",
+    "url": "https://alphaomegateam.co"
+  },
+  "license": "MIT",
+  "keywords": [
+    "kimai",
+    "time-tracking",
+    "timer",
+    "mod"
+  ],
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "url": {
+      "type": "string",
+      "title": "Kimai URL",
+      "description": "Base URL of your Kimai server, e.g. https://kimai.example.com",
+      "required": false
+    },
+    "apiToken": {
+      "type": "string",
+      "title": "API token",
+      "description": "A Kimai API token. Leave empty to use the headers helper instead.",
+      "sensitive": true,
+      "required": false
+    },
+    "headersHelper": {
+      "type": "string",
+      "title": "Headers helper",
+      "description": "Shell command that prints a token, or a JSON object of HTTP headers. Example: op read \"op://Vault/Kimai/credential\"",
+      "required": false
+    },
+    "helperTtlMinutes": {
+      "type": "number",
+      "title": "Helper cache (minutes)",
+      "description": "How long to reuse the headers helper's output before running it again. 0 runs it for every request.",
+      "default": 15,
+      "required": false
+    },
+    "pollSeconds": {
+      "type": "number",
+      "title": "Refresh interval (seconds)",
+      "description": "How often the footer chip checks Kimai for running timers (at least 15)",
+      "default": 60,
+      "required": false
+    }
+  }
+}

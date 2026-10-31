@@ -1,0 +1,15 @@
+{
+  "name": "alphaomegateam",
+  "description": "Claude Code plugins from Alpha Omega Team",
+  "owner": {
+    "name": "Alpha Omega Team",
+    "url": "https://alphaomegateam.co"
+  },
+  "plugins": [
+    {
+      "name": "kimai",
+      "source": "./",
+      "description": "Kimai timers in Claude Code: a footer chip for running timers and a /kimai panel to list, edit and start them"
+    }
+  ]
+}
